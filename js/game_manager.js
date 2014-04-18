@@ -535,8 +535,8 @@ GameManager.prototype.editorClick = function (data)
 		else
 			newValue = rightClick ? tile.value/2 : tile.value * 2;
 		
-		if(newValue > 2048)
-			newValue = 2048;
+		if(newValue > 65536)
+			newValue = 65536;
 		
 		// trying to remove a wall
 		if(newValue < 0)
