@@ -19,7 +19,7 @@ function GameManager(size, InputManager, Actuator, StorageManager, seed, level, 
 	this.isEditor = editor != null && editor != undefined && editor != false;
 	this.loading = false;
 
-	this.startingBudget = 512;
+	this.startingBudget = 65536;
 	this.startTiles = 8;
 	this.movesTaken = 0;
 	this.highestTileMade = 0;
@@ -355,7 +355,7 @@ GameManager.prototype.findLowestSplittableTileAndSplit = function ()
 GameManager.prototype.addTilesToMeetFillCount = function (fillCount, grid)
 {
 	// start with just 1 tile
-	var valuesGonnaAdd = [512];
+	var valuesGonnaAdd = [65536];
 	var numTwos = 0;
 
 	// split random values in half until achieve fill count
